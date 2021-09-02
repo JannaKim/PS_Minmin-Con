@@ -37,6 +37,6 @@ string solution(vector<string> table, vector<string> languages, vector<int> pref
             if(ans.compare(col[0]) > 0) ans = col[0];
         }
     }
-
+    
     return ans;
 }

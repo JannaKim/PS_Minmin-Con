@@ -24,6 +24,4 @@ def solution(table, languages, preference):
             if ans > k:
                 ans = k
 
-            
- 
     return ans
