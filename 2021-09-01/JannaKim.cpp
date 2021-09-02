@@ -17,11 +17,11 @@ int solution(string word) {
 
 bool dfs(int depth){
     ++ans;
-    if(occ == w) return true;
+    if(occ == w) return true; // compare cur with given
     if(depth == 5) return false;
 
     for(int i = 0; i < 5; ++i){
-        occ.push_back(v[i]);
+        occ.push_back(v[i]); // backtrack
         if(dfs(depth + 1)) return true;
         occ.pop_back();
     }
