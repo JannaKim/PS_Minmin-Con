@@ -1,23 +1,28 @@
 #include <string>
 #include <vector>
-#include <map>
-#include <algorithm>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
-vector<string> split(string line) {
+vector<string> split(string line){
     vector<string> words;
     size_t pos = 0;
-    while ((pos = line.find(' ')) != string::npos) {
+    while( (pos = line.find(' ')) != string::npos) { // 괄호 실수
         words.push_back(line.substr(0, pos));
         line.erase(0, pos + 1);
     }
     words.push_back(line.substr(0, pos));
     
+    for(string &str : words) cout << str << " ";
     return words;
 }
 
+int main(){
+    string line = "SI JAVA JAVASCRIPT SQL PYTHON C#";
+    split(line);
+
+}
 /*
 
 
@@ -34,4 +39,4 @@ vector<string> split(string line) {
 */
 
 
-map<int, vector<string>, greater <int>> scores; // descending order
+// map<int, vector<string>, greater <int>> scores; // descending order
