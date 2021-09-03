@@ -14,7 +14,6 @@ int solution(string word) {
     dfs(0);
     return ans;
 }
-
 bool dfs(int depth){
     ++ans;
     if(occ == w) return true; // compare cur with given
@@ -27,3 +26,4 @@ bool dfs(int depth){
     }
     return false;
 }
+
