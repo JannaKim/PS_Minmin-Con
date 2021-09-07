@@ -16,6 +16,8 @@ find rank of the word(or number) in permutation?
 4 2 1 3 2 5
 s e c r e t
 
+
+
 for each, look towards right.
 
 (find how many that is lower) / (repetitions)! * (descending idx)!
