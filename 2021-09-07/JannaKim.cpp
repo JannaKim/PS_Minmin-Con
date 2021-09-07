@@ -1,3 +1,5 @@
+#define pb push_back
+#define all(v) v.begin(),v.end()
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -21,10 +23,10 @@ vector<int> solution(vector<int> weights, vector<string> head2head) {
         graph[i] = {(tot - win_rate) / tot, n - heavy_rate, 150.0 - weights[i], i + 1};
     }
     
-    sort(graph.begin(), graph.end());
+    sort(all(graph));
     vector<int> answer(n);
     for (int i = 0; i < n ; ++i) 
           answer[i] = graph[i][3];
-    
+
     return answer;
 }
